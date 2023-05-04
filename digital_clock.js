@@ -52,3 +52,7 @@ window.addEventListener("load", () => {
       setTimeout(clock, 1000);
     }
   });
+
+  function back() {
+    window.location.href = "./fitnessplug.html";
+}

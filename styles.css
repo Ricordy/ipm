@@ -1,4 +1,5 @@
 body {
+    color: #FFFAF0;
     height: 300px;
     width: 300px;
     
@@ -7,9 +8,11 @@ body {
     justify-content: center;
 }
 .clock {
-    position: relative;
+    background-color: #7AE1D0;
+    position: absolute;
     display: flex;
     align-items: center;
+
 
     width: 300px;
     height: 300px;
@@ -17,14 +20,62 @@ body {
     border: 1rem solid black;
   }
 
+  #topSection {
+    color: #FFFAF0;
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 25%;
+    background-color: #7AE1D0;
+    background-size: contain;
+    border-top-right-radius: 60px;
+    border-top-left-radius: 60px;
+  }
+  #appSection{
+    overflow: scroll;
+    position: absolute;
+    top: 25%;  
+    width: 100%;
+    height: 75%;
+    background-color: #EBBDD1;
+    color: #FFFAF0;
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    max-width: 100%;
+    max-height: 300px;
+
+  }
+
+  #bottomSection {
+    color: #FFFAF0;
+    position: absolute;
+    top: 84%;
+    width: 99%;
+    height: 16%;
+    left: 2;
+    background-color: #7AE1D0;
+    background-size: contain;
+    border-bottom-right-radius: 150px;
+    border-bottom-left-radius: 150px;
+  }
+
 #menuTitle {
+    
     position: fixed;
     top: 5%;
     left: 3%;
     font-size: 1.50rem;
 }
+
+#menuSubTitle {
+  position: fixed;
+  color: #2446D6;
+    top: 8%;
+    left: 3%;
+    font-size: 0.75rem;
+}
 ul{
-    position: absolute;
+    position: relative;
     align-self: center;
     align-items: center;
 }
@@ -44,8 +95,10 @@ ul li{
     top: 3%;
     padding-left: 12%;
 }
+
   
 #cima {
+  color: #FFFAF0;
     position: absolute;
     top: 0;
     left: 50%;
@@ -55,6 +108,7 @@ ul li{
 
   }
 #direita {
+  color: #FFFAF0;
     position: absolute;
     top: 50%;
     left: 96%;
@@ -63,6 +117,7 @@ ul li{
   }
 
 #esquerda {
+  color: #FFFAF0;
     position: absolute;
     top: 50%;
     left: 1%;
@@ -71,6 +126,7 @@ ul li{
   }
 
 #baixo {
+  color: #FFFAF0;
     position: absolute;
     top: 94%;
     left: 50%;
@@ -78,11 +134,28 @@ ul li{
     height: 50%;
   }
 
+  #BPM{
+    position: relative;
+    margin-top: 4%;
+    left: 40%
+
+  }
+  #usefulInfo{
+    position: relative;
+    margin: 4px;
+  }
+
 .back{
     position: relative;
-    margin-top: 10rem;
     left: 42%;
     width: fit-content;
     height: fit-content;
     background-color: #d2e12b;
+}
+.backMap{
+  position: absolute;
+  left: 42%;
+  width: fit-content;
+  height: fit-content;
+  background-color: #d2e12b;
 }

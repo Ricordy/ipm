@@ -5,35 +5,48 @@
     <script src="digital_clock.js"></script>
     <script src="behaviour_menu.js"></script>
 </head>
-<body>
+<body onload="load()">
     <div class="clock">
+        <div id="topSection">
 
         <div  id="menuTitle">FitnessPlug</div>
 
         <div id="clockDigi">
             <h1 id="data-tempo"></h1>
           </div>
+        </div>
 
-         <ul>
-            <li>
-                Ritmo Cardiaco
-            </li>
-            <li>
-                Calorias
-            </li>
-            <li>
-                Passos
-            </li>
-            <li>
-                Peso
-            </li>
-            <li>
-                Mapas
-            </li>
-        </ul>
+        <div id="appSection">
+
+            <ul>
+                <li>
+                    Ritmo Cardiaco
+                </li>
+                <li>
+                    Calorias
+                </li>
+                <li>
+                    Passos
+                </li>
+                <li>
+                    Peso
+                </li>
+                <li>
+                    Mapas
+                </li>
+            </ul>
+         
 
 
+    </div>
+    <div id="bottomSection">
+        <button onclick="back()" class="back" > Voltar </button>
+    </div>
 
-       <button onclick="back()" class="back" > Voltar </button>
+    </div>
+    
        </div>
+       
+
+
 </body>

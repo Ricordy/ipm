@@ -2,7 +2,8 @@
 function load() {
     document.querySelectorAll("li").forEach(function(item){
     item.addEventListener('click', function(){
-        window.location.href = "./" + item.innerText.toLowerCase() + ".html";
+        console.log(item.innerText.toLowerCase().replace(" ",""));
+        window.location.href = "./" + item.innerText.toLowerCase().replace(" ","") + ".html";
     });
 });
 }

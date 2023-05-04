@@ -1,0 +1,93 @@
+<head>
+    <title>SmartWatch</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="heart_styles.css">
+    <script src="digital_clock.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+    <script src="behaviour_calories.js"></script>
+</head>
+<body>
+    <div class="clock">
+        <div id="topSection">
+
+        <div  id="menuTitle">FitnessPlug</div>
+        <div  id="menuSubTitle">Calorias</div>
+
+        <div id="clockDigi">
+            <h1 id="data-tempo"></h1>
+          </div>
+        </div>
+
+        <div id="appSection">
+
+
+            <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+            <script>
+                const xValues = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,18,19,20,21,22,23,24,25,26,27,28,29,30];
+                const yValues = [1500,1890,1234,2300,2190,1890,2302,1002,1503,1200,1001,1500,1890,1934,2300,2190,1090,4302,1002,1503,1200,1001,1500,1190,1232,2300,2190,1890,1302,2502,1503,1200,1001];
+
+                const data = {
+                    labels: xValues,
+                    datasets: [{
+                    label: "Calorias",
+                    backgroundColor:"rgba(0,0,0,0)",
+                    borderColor: "rgba(0,0,255,0.1)",
+                    data: yValues
+                    }]
+                }
+                new Chart("myChart", {
+                type: "line",
+                data: data,
+                options: {
+                    animation: false,
+                    plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        enabled: false
+                    }
+                    }
+                },
+                });
+            </script>
+            <div id="usefulInfo">
+              
+                <h2> Pequeno Resumo</h2>
+                    Controlar a ingestão de calorias é fundamental para manter um estilo de vida saudável e alcançar seus objetivos de fitness. Com um smartwatch, você pode monitorar facilmente suas calorias diárias e garantir que está consumindo a quantidade certa para seus objetivos. Aqui estão algumas dicas para ajudar você a controlar suas calorias:
+                    
+                    <h2>Contagem de calorias:</h2>
+                    
+                    A contagem de calorias é uma maneira eficaz de controlar sua ingestão diária de alimentos. Com um smartwatch, você pode facilmente registrar suas refeições e lanches para monitorar sua ingestão de calorias. Lembre-se de que cada pessoa tem necessidades calóricas diferentes, com base em fatores como idade, altura, peso e nível de atividade física.
+                    
+                    <h2>Rastreamento de macronutrientes:                 </h2>
+                    Além das calorias, é importante rastrear a ingestão de macronutrientes, como proteínas, carboidratos e gorduras. Esses nutrientes desempenham papéis importantes na manutenção da saúde e na construção muscular. Com um smartwatch, você pode definir metas de ingestão de macronutrientes e monitorar sua ingestão diária.
+                    
+                    <h2>Monitoramento de hidratação:
+                    </h2>
+                    A hidratação é essencial para manter um estilo de vida saudável e controlar a ingestão de calorias. Beber bastante água ajuda a controlar o apetite e manter seu corpo hidratado. Com um smartwatch, você pode monitorar sua ingestão de água e definir lembretes para beber mais água durante o dia.
+                   
+                    <h2>Conectividade com outras aplicações:
+                    </h2>
+                    Algumas aplicações de smartwatch permitem conectar-se a outras aplicações de saúde e fitness, como aplicativos de rastreamento de calorias e exercícios. Essas conexões podem ajudá-lo a monitorar sua ingestão de calorias e seus exercícios em um só lugar, para um melhor controle de sua saúde.
+                    
+                    <h2>Análise de dados:
+                    </h2>
+                    Com o smartwatch, você pode facilmente analisar seus dados de ingestão de calorias e ajustar seus hábitos alimentares de acordo. Você pode acompanhar sua ingestão diária de calorias, macronutrientes e hidratação, e verificar se está atingindo suas metas. Com esses dados, você pode identificar padrões e fazer ajustes em sua dieta para melhorar sua saúde e alcançar seus objetivos de fitness.
+                    <p>
+                        Com o uso de um smartwatch, você pode controlar facilmente sua ingestão de calorias, monitorar seus nutrientes e alcançar seus objetivos de saúde e fitness. Lembre-se sempre de consultar um nutricionista antes de iniciar qualquer dieta ou mudança em seus hábitos alimentares.
+                    </p>
+            </div>
+
+
+
+       
+    </div>
+
+    <div id="bottomSection">
+        <button onclick="back()" class="back" > Voltar </button>
+    </div>
+       </div>
+
+</body>
