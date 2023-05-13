@@ -1,0 +1,87 @@
+<head>
+    <title>SmartWatch</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="heart_styles.css">
+    <script src="digital_clock.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+    <script src="behaviour_calories.js"></script>
+</head>
+<body>
+    <div class="clock">
+        <div id="topSection">
+
+        <div  id="menuTitle">FitnessPlug</div>
+        <div  id="menuSubTitle">Passos</div>
+
+        <div id="clockDigi">
+            <h1 id="data-tempo"></h1>
+          </div>
+        </div>
+
+        <div id="appSection">
+
+
+            <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+            <script>
+                const xValues = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,18,19,20,21,22,23,24,25,26,27,28,29,30];
+                const yValues = [15200,15890,11234,2300,21190,14890,24402,15402,12303,13200,19001,15560,12890,11934,12300,21190,15090,14302,15002,17503,12600,14001,15002,11950,13232,2300,2190,19890,13002,22502,10503,1200,1001];
+
+                const data = {
+                    labels: xValues,
+                    datasets: [{
+                    label: "Passos",
+                    backgroundColor:"rgba(0,0,0,0)",
+                    borderColor: "rgba(0,0,255,0.1)",
+                    data: yValues
+                    }]
+                }
+                new Chart("myChart", {
+                type: "line",
+                data: data,
+                options: {
+                    animation: false,
+                    plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        enabled: true
+                    }
+                    }
+                },
+                });
+            </script>
+            <div id="usefulInfo">
+              
+                <h2> Pequeno Resumo</h2>
+                O aumento da atividade física diária pode ter um grande impacto em sua saúde e bem-estar geral. Com um smartwatch, você pode facilmente monitorar seus passos diários e definir metas para melhorar sua saúde física. Aqui estão algumas dicas para ajudar você a enriquecer seu corpo através dos passos diários:                    
+                    <h2>Estabeleça um objetivo:
+                    </h2>
+                    Com um smartwatch, você pode definir uma meta diária de passos e acompanhar seu progresso. É recomendado caminhar pelo menos 10.000 passos por dia para manter um estilo de vida ativo e saudável. A meta pode ser ajustada de acordo com a necessidade de cada indivíduo.                    
+                    <h2>Estabeleça um objetivo:                </h2>
+                    Além das calorias, é importante rastrear a ingestão de macronutrientes, como proteínas, carboidratos e gorduras. Esses nutrientes desempenham papéis importantes na manutenção da saúde e na construção muscular. Com um smartwatch, você pode definir metas de ingestão de macronutrientes e monitorar sua ingestão diária.
+                    
+                    <h2>Monitoramento da frequência cardíaca:
+                    </h2>
+                    Alguns smartwatches possuem monitoramento da frequência cardíaca, o que pode ajudá-lo a manter um controle mais preciso da sua atividade física diária. O monitoramento da frequência cardíaca também é útil para garantir que você esteja se exercitando em uma zona segura e saudável para o seu corpo.
+                    A hidratação é essencial para manter um estilo de vida saudável e controlar a ingestão de calorias. Beber bastante água ajuda a controlar o apetite e manter seu corpo hidratado. Com um smartwatch, você pode monitorar sua ingestão de água e definir lembretes para beber mais água durante o dia.
+                   
+                    <h2>Acompanhamento do sono:
+                    </h2>
+                    Uma boa qualidade de sono é fundamental para manter uma boa saúde física e mental. Com um smartwatch, você pode monitorar sua qualidade de sono e obter insights sobre a duração e a profundidade do sono. Um sono adequado ajuda na recuperação do corpo e contribui para uma vida mais saudável.                    
+                    <h2>Acompanhamento de atividades físicas:
+                    </h2>
+                    Além dos passos diários, é importante incluir atividades físicas na rotina diária. Com um smartwatch, você pode monitorar diferentes tipos de atividades físicas, como corrida, ciclismo e natação. Monitorando sua atividade física diária, você pode identificar áreas em que precisa melhorar e estabelecer metas para atingir seus objetivos de fitness.                    <p>
+                    Com o uso de um smartwatch, você pode controlar facilmente sua ingestão de calorias, monitorar seus nutrientes e alcançar seus objetivos de saúde e fitness. Lembre-se sempre de consultar um nutricionista antes de iniciar qualquer dieta ou mudança em seus hábitos alimentares.
+                    </p>
+            </div>
+
+
+    </div>
+    <div id="bottomSection">
+        <button onclick="back()" class="back" > Voltar </button>
+    </div>
+    </div>
+
+</body>

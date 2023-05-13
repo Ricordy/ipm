@@ -1,0 +1,91 @@
+<head>
+    <title>SmartWatch</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="heart_styles.css">
+    <script src="digital_clock.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+    <script src="behaviour_calories.js"></script>
+</head>
+<body>
+    <div class="clock">
+        <div id="topSection">
+
+        <div  id="menuTitle">FitnessPlug</div>
+        <div  id="menuSubTitle">Peso</div>
+
+        <div id="clockDigi">
+            <h1 id="data-tempo"></h1>
+          </div>
+        </div>
+
+        <div id="appSection">
+
+
+            <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+            <script>
+                const xValues = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,18,19,20,21,22,23,24,25,26,27,28,29,30];
+                const yValues = [67.2,67.1,67.7,68.1,69.1,69.0,68.8,68.6,68.5,68.6,68.3,68.1,68.3,67.8,67.4,67.8,67.6,67.4,67.6,67.3,67.1,67.9,67.1,67.6,67.5,67.4,67.8,68.1,68.0,68.1,68.2,];
+
+                const data = {
+                    labels: xValues,
+                    datasets: [{
+                    label: "Peso",
+                    backgroundColor:"rgba(0,0,0,0)",
+                    borderColor: "rgba(0,0,255,0.1)",
+                    data: yValues
+                    }]
+                }
+                new Chart("myChart", {
+                type: "line",
+                data: data,
+                options: {
+                    animation: false,
+                    plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        enabled: false
+                    }
+                    }
+                },
+                });
+            </script>
+            <div id="usefulInfo">
+              
+                <h2> Pequeno Resumo</h2>
+                O controle de peso é um aspecto crucial para manter um estilo de vida saudável e ativo. Com um smartwatch, você pode monitorar facilmente seu peso e estabelecer metas para atingir seus objetivos de perda de peso ou manutenção de peso. Aqui estão algumas dicas para ajudar você a enriquecer seu corpo através do controle de peso:                    
+                    <h2>Defina um objetivo de peso:
+                    </h2>
+                    
+                    Com um smartwatch, você pode definir uma meta de peso e acompanhar seu progresso. É importante definir metas realistas e alcançáveis para garantir que você esteja progredindo de forma saudável. Alguns smartwatches possuem também a função de calcular o IMC (Índice de Massa Corporal) para ajudar a avaliar seu peso e saúde geral.                    
+                    <h2>Monitoramento da ingestão calórica:
+                    </h2>
+                    Para controlar o peso, é importante controlar a ingestão calórica diária. Com um smartwatch, você pode monitorar sua ingestão calórica e controlar a quantidade de alimentos que consome ao longo do dia. Isso ajuda a garantir que você esteja ingerindo a quantidade adequada de nutrientes e calorias para atingir seus objetivos de perda de peso ou manutenção de peso.                    
+                    <h2>Monitoramento da atividade física:
+
+                    </h2>
+                    Além de controlar a ingestão calórica, é importante incorporar atividades físicas na rotina diária para ajudar a queimar calorias e manter um peso saudável. Com um smartwatch, você pode monitorar diferentes tipos de atividades físicas, como corrida, ciclismo e natação, além de monitorar as calorias queimadas durante a atividade. Isso ajuda a manter um controle mais preciso do déficit calórico e a garantir que você esteja se exercitando de forma segura e saudável.                   
+                    <h2>Acompanhamento da hidratação:
+
+                    </h2>
+                    Manter-se hidratado é importante para ajudar a controlar o peso e manter uma boa saúde geral. Com um smartwatch, você pode monitorar sua ingestão diária de água e definir lembretes para beber mais água ao longo do dia. Isso ajuda a manter o corpo em bom funcionamento e melhora a recuperação do corpo após as atividades físicas.                    
+                    <h2>Análise de dados e feedback:
+                    </h2>
+                    Com o uso de um smartwatch, você pode monitorar seus dados de saúde e obter feedback sobre seu progresso em relação aos seus objetivos de peso. Isso ajuda a identificar áreas em que você pode melhorar e ajustar sua rotina para atingir seus objetivos. Alguns smartwatches possuem também a função de avaliação de sono para ajudar a manter um bom descanso e auxiliar no controle de peso.                   
+                     <p>
+                       
+                        Com o uso de um smartwatch, você pode controlar facilmente seu peso e garantir que está no caminho certo para atingir seus objetivos de perda de peso ou manutenção de peso. Lembre-se de consultar um profissional de saúde antes de iniciar qualquer dieta ou rotina de exercícios para garantir que seja adequado para o seu corpo e suas necessidades individuais.                    </p>
+            </div>
+
+
+
+
+    </div>
+    <div id="bottomSection">
+        <button onclick="back()" class="back" > Voltar </button>
+    </div>
+       </div>
+
+</body>
